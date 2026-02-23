@@ -1,0 +1,10 @@
+John,Doe,6$R4x#T8!p,1991,9,28
+Alice,Brown,9@ZqP$7&sL
+Michael,Johnson,2%Kp@4v!yS
+Emily,Chen,3#Qm@9f^eL
+David,Wilson,5$Lc#7t@uF
+Sarah,Taylor,8&Hv$3a@nM
+Chris,Martinez,1#Zr@6b$hA
+Samantha,Garcia,4$Gs@8r!wO
+James,Lee,7&Ev@2q#yB
+Jane,Smith,0!Pa@5j#kU

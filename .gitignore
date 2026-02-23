@@ -1,0 +1,30 @@
+# 忽略所有的 .log 文件
+*.log
+
+# 忽略所有的 .tmp 目录
+*.tmp/
+
+# 忽略 node_modules 目录
+node_modules/
+
+# 忽略 macOS 系统文件
+.DS_Store
+
+# 忽略编辑器生成的文件
+.vscode/
+.idea/
+
+# 忽略个人配置文件
+config.ini
+
+# 忽略压缩文件
+*.zip
+*.tar.gz
+*.rar
+
+# 忽略编译生成的文件
+dist/
+build/
+
+# 忽略特定的文件或目录
+myapp/assets/*.png
