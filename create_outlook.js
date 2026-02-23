@@ -1,4 +1,6 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+puppeteer.use(StealthPlugin());
 const fs = require('fs');
 
 (async () => {
@@ -20,10 +22,19 @@ const fs = require('fs');
     const birthYear = String(Math.floor(Math.random() * 12) + 1988); // 1988-1999
     const birthMonth = String(Math.floor(Math.random() * 12) + 1);   // 1-12
     const birthDay = String(Math.floor(Math.random() * 28) + 1);     // 1-28
-    const randSuffix = Math.floor(Math.random() * 900000 + 100000);
-    const email = `${firstName}${lastName}${birthYear}${birthMonth}${birthDay}${randSuffix}@outlook.com`;
+  const randSuffix = Math.floor(Math.random() * 90000 + 1000); // 3-4位短数字
+const email = firstName.toLowerCase() + lastName.toLowerCase() + randSuffix + '@outlook.com';
 
-    const browser = await puppeteer.launch({ headless: false });
+const browser = await puppeteer.launch({ 
+        headless: false,
+        // 这里换成了你电脑上真实的 Chrome 路径（注意双斜杠）
+        executablePath: 'C:\\Users\\28925\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe', 
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-blink-features=AutomationControlled' // 抹除自动化特征
+        ]
+    });
     const page = await browser.newPage();
     await page.goto('https://signup.live.com/signup', { waitUntil: 'domcontentloaded' });
 

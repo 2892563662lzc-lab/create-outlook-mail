@@ -17,6 +17,13 @@ node_modules/
 # 忽略个人配置文件
 config.ini
 
+# 忽略包含账号密码的数据文件（敏感信息，不上传）
+gmail.txt
+outlook.txt
+
+# 忽略 Claude 配置
+.claude/
+
 # 忽略压缩文件
 *.zip
 *.tar.gz
